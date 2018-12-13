@@ -1,0 +1,6 @@
+---
+- name: Selinux set to permissive
+  selinux:
+    policy: targeted
+    state: permissive
+  tags: selinux

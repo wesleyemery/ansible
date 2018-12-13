@@ -1,0 +1,7 @@
+---
+- name: Yum - set installonly_limit to 2
+  lineinfile:
+    path: /etc/yum.conf
+    regexp: '^installonly_limit'
+    line: 'installonly_limit=2'
+  tags: yum

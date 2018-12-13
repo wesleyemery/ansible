@@ -1,0 +1,38 @@
+---
+# tasks file for base
+
+- name: Install OS and add on softare
+  import_tasks: defaultpackages.yml
+
+- name: Install nmon
+  import_tasks: installnmon.yml
+
+- name: Install htop
+  import_tasks: installhtop.yml
+
+- name: Configure SELinux
+  import_tasks: selinux.yml
+
+- name: Configure the login.defs file
+  import_tasks: logindefs.yml
+
+- name: User administration
+  import_tasks: useradmin.yml
+
+- name: Configure DNS
+  import_tasks: dns.yml
+
+- name: Configure SSH server
+  import_tasks: sshd.yml
+
+- name: Create skeleton bash history file
+  import_tasks: bashhistoryenable.yml
+
+- name: Firewalld management
+  import_tasks: firewalld.yml
+
+- name: YUM configuration
+  import_tasks: yum.yml
+
+- name: Disable unneeded services
+  import_tasks: disableservices.yml

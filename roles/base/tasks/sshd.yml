@@ -1,0 +1,21 @@
+---
+- name: Copy SSH Banner
+  copy:
+    src: ssh_banner
+    dest: /etc/ssh/banner
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+  tags: sshd
+
+- name: Copy default sshd config file into place and restart sshd service
+  copy:
+    src: sshd_config
+    dest: /etc/ssh/sshd_config
+    owner: root
+    group: root
+    mode: 0600
+    backup: yes
+  notify: restart sshd
+  tags: sshd

@@ -1,0 +1,14 @@
+- name: Copy nmon rpm to target 
+  copy:
+    src: nmon-16g-3.el7.x86_64.rpm 
+    dest: /usr/local/src/nmon-16g-3.el7.x86_64.rpm
+    owner: root 
+    group: root
+    mode: 0644
+  tags: nmon
+
+- name: Install nmon rpm from a local file
+  yum:
+    name: /usr/local/src/nmon-16g-3.el7.x86_64.rpm 
+    state: present
+  tags: nmon

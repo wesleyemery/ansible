@@ -1,0 +1,14 @@
+- name: Copy nmon rpm to target 
+  copy:
+    src: htop-2.2.0-1.el7.x86_64.rpm 
+    dest: /usr/local/src/htop-2.2.0-1.el7.x86_64.rpm
+    owner: root 
+    group: root
+    mode: 0644
+  tags: htop
+
+- name: Install nmon rpm from a local file
+  yum:
+    name: /usr/local/src/htop-2.2.0-1.el7.x86_64.rpm 
+    state: present
+  tags: htop 

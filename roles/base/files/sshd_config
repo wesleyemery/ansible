@@ -1,0 +1,42 @@
+###############################################################################
+###############################################################################
+## This sshd_conf file managed by Satellite Server lx00010300p               ##
+## File location of Master: /sdd/scripts/sysfiles/sshd_conf                  ##
+##                                                                           ##
+## sshd_conf Consolidated RHEL Version v1.1 09/14/2016 Managed by Satellite  ##
+## Changes:                                                                  ##
+###############################################################################
+###############################################################################
+
+Banner /etc/ssh/banner
+PermitRootLogin no 
+PermitEmptyPasswords no
+IgnoreRhosts no
+IgnoreRhosts yes
+HostbasedAuthentication no
+UsePrivilegeSeparation yes
+UseDNS no
+
+Protocol 2
+SyslogFacility AUTHPRIV
+PasswordAuthentication yes
+ChallengeResponseAuthentication no
+GSSAPIAuthentication yes
+GSSAPICleanupCredentials yes
+
+DenyGroups mcas quebit prodba winpup
+
+KerberosAuthentication yes
+KerberosOrLocalPasswd yes
+KerberosTicketCleanup yes
+
+UsePAM yes
+
+AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
+AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
+AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE
+AcceptEnv XMODIFIERS
+
+X11Forwarding yes
+X11UseLocalhost no
+Subsystem	sftp	/usr/libexec/openssh/sftp-server

@@ -1,0 +1,52 @@
+---
+- name: Firewalld - Start and enable
+  service:
+    name: "firewalld"
+    enabled: true
+    state: started
+  tags: firewalld
+
+- name: Firewalld - Open 1270 TCP for SCOM
+  firewalld:
+    zone: public
+    port: 1270/tcp
+    permanent: true
+    state: enabled
+  notify: restart firewalld
+  tags: firewalld
+
+- name: Firewalld - Open 8006 for ControlM
+  firewalld:
+    zone: public
+    port: 8006/tcp
+    permanent: true
+    state: enabled
+  notify: restart firewalld
+  tags: firewalld
+
+- name: Firewalld - Open 8400 for Simapana-Commvault
+  firewalld:
+    zone: public
+    port: 8400/tcp
+    permanent: true
+    state: enabled
+  notify: restart firewalld
+  tags: firewalld
+
+- name: Firewalld - Open 8402 for Simapana-Commvault
+  firewalld:
+    zone: public
+    port: 8402/tcp
+    permanent: true
+    state: enabled
+  notify: restart firewalld
+  tags: firewalld
+
+- name: Firewalld - Disable dhcpv6-client service, enabled by default in RHEL7
+  firewalld:
+    zone: public
+    service: dhcpv6-client
+    permanent: true
+    state: disabled
+  notify: restart firewalld
+  tags: firewalld

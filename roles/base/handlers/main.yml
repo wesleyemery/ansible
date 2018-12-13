@@ -1,0 +1,17 @@
+---
+# handlers file for base
+- name: restart networkmanager
+  service:
+    name: NetworkManager
+    state: restarted
+
+- name: restart firewalld
+  service:
+    name: firewalld
+    state: restarted
+
+- name: restart sshd
+  service:
+    name: sshd
+    state: restarted
+

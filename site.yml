@@ -1,0 +1,8 @@
+---
+## Apply common configuration to all hosts
+- name: Apply common configuration to all nodes
+  hosts: build
+  become: yes
+
+  roles:
+    - base 

@@ -1,0 +1,7 @@
+---
+- name: Disable unnecssary wpa_supplicant service
+  systemd:
+    name: wpa_supplicant
+    enabled: no
+    state: stopped
+  tags: disableservices

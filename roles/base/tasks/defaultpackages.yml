@@ -1,0 +1,5 @@
+- name: Installing default packages
+  package:
+     name={{common_pkgs}}
+     state=present
+  tags: defaultpackages 

@@ -1,0 +1,10 @@
+---
+- name: Ensure bash_history exists in the etc skeleton directory
+  copy:
+    content: ""
+    dest: /etc/skel/.bash_history
+    force: no
+    group: root
+    owner: root
+    mode: 0644
+  tags: bashhistory

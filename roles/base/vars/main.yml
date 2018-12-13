@@ -1,0 +1,150 @@
+---
+# vars file for base
+resolv_search:
+  - "westrock.com"
+  - "rocktenn.com"
+  - "meadwestvaco.com"
+
+resolv_nameservers:
+  - "10.1.2.31"
+  - "10.1.2.36"
+
+groups_to_create:
+  - name: AIXAdmin
+    gid: 901
+
+  - name: SERVICE
+    gid: 234
+
+users:
+  - username: wemery
+    name: Wes Emery - Linux Engineer
+    append: no
+    group: AIXAdmin
+    uid: 304496 
+    shell: /bin/bash
+    home: /home/wemery
+    update_password: on_create
+    users_create_per_user_group: false
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCiCDwrbFcq3FAIoLQ2jhnXTXBa5GXjclzlLjYSrYnTftkxxJdntvxtqdhXGnoIpjNx78aES4FF+XJ4edo2R7ygUzYIhOmjhByLO/DWjsNveABzIKMWrdSj4H2Y2YtALkPu/tTormknYsrZzW17luWK8o7jF4wYzng3H8xBF5228HnBu7XxO+ddsE2yNRnkMTZRCQkUoWZhSNemOcsxoT+iJEK5FbgQMSESeoEB7rp60ZL1n7lGk/EjtQQk4MvNHysm0FgV0IafoQBdcaX3hxljO/E+KuJ7rT6mBMw1mbziNcMfL2tzphk8S74pN7DEyZB9H82YE5Y8Qmxm9rUSMkS3tPGG++DfwjTiSjgSdWmjSogHIiexXAM42GLbbReQpP4bn+hpXAD3Ax42VTaPtAOdu9gLmmDvjLW6KvbGxlsXh9moEveZ79kHIOy4DmMgOe/oP4Z37sUUJ/24Mq+NOWHSSBmYVF25MTpaqj8rbniKrsoubVhbf5YrqGpLmuw2eIvh6e7iUEniQlw1+MT+5jpq1NcvBOhp4e6ybErK0a1MbTlDi5jgN9REtbMxr/dzCJYdXAkBDtTO4JqXOob17f+bi5RwjPE8uu1ByQ5BmYDW+4OCgRF+rGDpiq3M9eUvySIA5K7xHwLlW4KD8vu5bS7Ifv+jSF0ybHfTOFjWDAOSgQ== wesley.emery@westrock.com"
+
+  - username: jbaldwin5 
+    name: Jeff Baldwin - Linux Engineer
+    append: no
+    group: AIXAdmin
+    uid: 318427 
+    shell: /bin/bash
+    home: /home/jbaldwin5
+    update_password: on_create
+    users_create_per_user_group: false
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC7x3J2J9Y0zoT/9MYuhg2xhLfT49ambrhVUbPreYxtIbtyS4iRLI2tGWu3GHwft02Q9Bg+CosaxVQ8LbKBXThpenJ8a/CeANrw4htmfYKeLx8KvHmVhb8swUtv56zmMVBv04esMXW4J3SlFu+UYNQKWHAjF05Fp8OTJyKaJe59se9D+3s6ernarmnZEtGBwEuAqvMu9aYi08ZYxvGW4OF0Rk6cajoM6Ku+8WEUtoo8beUVI4oS+ahndC2JUKotuazXrvH1kSPyyi5Fe8YYZ98O36y9l3rG1e9R8O7gOOXDUAV61pivdUjwBBnjGnbtRT7ghtkdahbg5kUg8XLd7GoN6zM26C+e1t71IhkuAQE2TNRt6HOL79yY2d5grtNWbK7hpbeBAqv/odatXJU2IWJ0pG2EtB4DgqezH14EiusQhMBKOoKMcq0AoQwygFqiBo/yGPxQgEzMrixExeZucBbmwz1wuM4RyGRBBDLockdJq7gVvRZbawJbIinI6JxBgovNnrn+EHJ6rt6pCWT35vmzzPSF8BFAmuCkJWW3yrJsFwL5LYtncMRJAPi+7wUXYUo4e55qPoFT0ZgFxQtTNs7obC/Lz49tIqhMEEgSDVSRrfZnaKX7LBmNKuzByC9LkZk6u5uKdj0RMIY9MyelZ0yC9LeVeZl/4VfJk5KCNQ3/KQ== jeffbaldwin@westrock"
+
+  - username: lmiddend 
+    name: Lendy Middendorf - AIX Engineer
+    append: no
+    group: AIXAdmin
+    uid: 216419
+    shell: /bin/bash
+    home: /home/lmiddend
+    update_password: on_create 
+    password: $6$WestRock$DnUGNdoIJd6ncDlXE5VoTMnnSmnu6RZfoFhl4D/5IWtx8p4v4nASHuqnZ0A4pYS2sV6dfOjM5axRmUxw9xjZS/
+    users_create_per_user_group: false
+
+  - username: pclayton
+    name: Phil Clayton - AIX Architect
+    append: no
+    group: AIXAdmin
+    uid: 102164
+    shell: /bin/bash
+    home: /home/pclayton
+    update_password: on_create
+    password: $6$WestRock$DnUGNdoIJd6ncDlXE5VoTMnnSmnu6RZfoFhl4D/5IWtx8p4v4nASHuqnZ0A4pYS2sV6dfOjM5axRmUxw9xjZS/
+    users_create_per_user_group: false
+
+  - username: pmimura 
+    name: Paul Mimura - AIX Engineer 
+    append: no
+    group: AIXAdmin
+    uid: 125717 
+    shell: /bin/bash
+    home: /home/pmimura
+    update_password: on_create
+    password: $6$WestRock$DnUGNdoIJd6ncDlXE5VoTMnnSmnu6RZfoFhl4D/5IWtx8p4v4nASHuqnZ0A4pYS2sV6dfOjM5axRmUxw9xjZS/
+    users_create_per_user_group: false
+
+  - username: klitz 
+    name: Kevin Litz - AIX Engineer
+    append: no
+    group: AIXAdmin
+    uid: 906271 
+    shell: /bin/bash
+    home: /home/klitz
+    update_password: on_create
+    password: $6$WestRock$DnUGNdoIJd6ncDlXE5VoTMnnSmnu6RZfoFhl4D/5IWtx8p4v4nASHuqnZ0A4pYS2sV6dfOjM5axRmUxw9xjZS/
+    users_create_per_user_group: false
+
+  - username: opsmgrsvc
+    name: SCOM Svc Agent
+    append: no
+    uid: 153
+    users_create_per_user_group: true
+    shell: /bin/bash
+    home: /home/opsmgrsvc
+    update_password: on_create
+    password: $6$WestRock$l1dCXMkRjr/PN8oeUn4IyG.Z7gw12J/gNz.Xx2s2a35tLtqvbXv7.bB69u0goiheaJZeTrwh7T.5iZwkdf5Wr1
+
+  - username: simpana 
+    name: Simapana-Commvault Svc Agent
+    append: no
+    uid: 903 
+    users_create_per_user_group: true
+    shell: /bin/bash
+    home: /home/simpana
+    update_password: on_create
+    password: $6$WestRock$FYgdXlNnRNflvN0Z5jFJb1p157kGt/6aG10jRdZtJfSpiq0OHMtlrGpkj6HHraFazGOslaikCpeI79K3vXHn.1
+
+  - username: sndiscov
+    name: ServiceNow Discovery User
+    append: no
+    uid: 2464
+    group: SERVICE
+    users_create_per_user_group: false 
+    shell: /bin/bash
+    home: /home/sndiscov
+    update_password: on_create
+    password: $6$WestRock$nRjnLtE.DssV.m6iFlXFcHbYQgs0vzFAgWgDkWretyC1SkJNOxcRwlkXder8s7Q6ikPJMtEv5Or4zSDeouOLm/ 
+
+users_deleted: []
+
+common_pkgs:
+  - audit
+  - bind-utils
+  - cyrus-sasl
+  - cyrus-sasl-plain
+  - ksh
+  - lshw
+  - mailx
+  - net-tools
+  - nmap
+  - ntp
+  - postfix
+  - puppet
+  - vim
+  - yum-utils
+  - xfsprogs
+  - open-vm-tools
+  #These are Control-M pre-reqs
+  - pam.i686
+  - krb5-libs.i686
+  - glibc.i686
+  - libcom_err.i686
+  - libidn.i686
+  - libstdc++.i686
+  - ksh
+  #These are KRB5 related
+  - krb5-libs
+  - krb5-workstation
+  - pam_krb5
+  - nscd

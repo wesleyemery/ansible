@@ -1,0 +1,30 @@
+- name: OS - Configure login.defs to match WestRock standards
+  lineinfile:
+    path: /etc/login.defs
+    backup: yes
+    regexp: '{{item.regexp}}'
+    line: '{{item.line}}'
+  with_items:
+    - { regexp: '^PASS_MAX_DAYS', line: 'PASS_MAX_DAYS   90' }
+    - { regexp: '^PASS_MIN_DAYS', line: 'PASS_MIN_DAYS   0' }
+    - { regexp: '^PASS_WARN_AGE', line: 'PASS_WARN_AGE   7' }
+    - { regexp: '^PASS_MIN_LEN', line: 'PASS_MIN_LEN    8' }
+    - { regexp: '^UID_MIN', line: 'UID_MIN                   500' }
+    - { regexp: '^UID_MAX', line: 'UID_MAX                 60000' }
+    - { regexp: '^GID_MIN', line: 'GID_MIN                   500' }
+    - { regexp: '^GID_MAX', line: 'GID_MAX                 60000' }
+    - { regexp: '^MD5_CRYPT_ENAB', line: 'MD5_CRYPT_ENAB no' }
+  tags: logindefs
+
+- name: OS - Remove unused login.defs options to match WestRock standards
+  lineinfile:
+    path: /etc/login.defs
+    state: absent
+    backup: yes
+    regexp: '{{item.regexp}}'
+  with_items:
+    - { regexp: '^SYS_UID_MIN' }
+    - { regexp: '^SYS_UID_MAX' }
+    - { regexp: '^SYS_GID_MAX' }
+    - { regexp: '^SYS_GID_MIN' }
+  tags: logindefs

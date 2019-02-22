@@ -1,0 +1,16 @@
+---
+# tasks file for base packages
+- name: running yum Cache update
+  yum:
+    update_cache: yes
+    name: vim
+    state: present
+  when: ansible_distribution == 'RedHat' 
+
+- name: installing Base Packages
+  package: name={{ item }} state=present
+  with_items: "{{ basepackages|default([]) }}"
+
+- name: remove unwanted Packages
+  package: name={{ item }} state=absent
+  with_items: "{{ basepackages_remove|default([]) }}"

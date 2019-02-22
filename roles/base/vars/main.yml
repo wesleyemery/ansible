@@ -130,11 +130,11 @@ common_pkgs:
   - nmap
   - ntp
   - postfix
-  - puppet
   - vim
   - yum-utils
   - xfsprogs
   - open-vm-tools
+  - rsync
   #These are Control-M pre-reqs
   - pam.i686
   - krb5-libs.i686

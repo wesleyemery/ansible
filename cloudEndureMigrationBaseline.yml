@@ -3,7 +3,7 @@
   hosts: lx00010301d 
   become: true
   roles:
-    - role: wr.packages
+    - role: packages
       basepackages:
         - perl-DateTime
         - perl-Sys-Syslog
@@ -13,8 +13,8 @@
         - ipchains
         - kernel-source
         - firewalld 
-    - wr.cloudEndureAgent
-    - wr.awscli
-    - wr.cloudwatch_agent
-    - wr.ssm
+    - cloudEndureAgent
+    - awsCli
+    - cloudWatchAgent
+    - ssm
 

@@ -1,0 +1,7 @@
+---
+# handlers file for wr.ssm
+- name: ssm-start
+  service: 
+    name: ssm
+    state: started 
+    enabled: yes

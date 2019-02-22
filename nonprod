@@ -1,7 +1,0 @@
-# file: nonprod
-
-[all:vars]
-ansible_user=ifreling
-
-[build]
-10.1.168.7

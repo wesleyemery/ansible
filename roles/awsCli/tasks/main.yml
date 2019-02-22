@@ -1,0 +1,16 @@
+---
+# tasks file for wr.awscli
+
+- name: Downloading pip installation script 
+  get_url:
+    url: https://bootstrap.pypa.io/get-pip.py 
+    dest: /tmp/get-pip.py
+  
+- name: Installing pip
+  command: python /tmp/get-pip.py 
+
+- name: Installing AWS CLI 
+  pip:
+    name: awscli 
+    extra_args: --upgrade
+    

@@ -1,0 +1,25 @@
+---
+# tasks file for wr.cloudEndureAgent
+- name: make sure wget is present
+  yum:
+   name: wget
+   state: present
+
+- name: get CloudEndure agent
+  command: wget -O /tmp/installer_linux.py https://console.cloudendure.com/installer_linux.py
+  args:
+    warn: no
+
+- name: set execute perms on installer
+  file:
+    path: /tmp/installer_linux.py
+    mode: 0744
+
+- name: install CloudEndure agent
+  command: /tmp/installer_linux.py -t E2C7-2CC5-37E4-B5EC-9119-D32C-2705-3FB3-541E-9BD1-BEDC-D7B0-3CEB-2CA7-8577-4AD1 --no-prompt
+
+- name: remove agent installer
+  file:
+    path: /tmp/installer_linux.py
+    state: absent
+

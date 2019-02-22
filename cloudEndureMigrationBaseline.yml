@@ -1,0 +1,20 @@
+---
+- name: 
+  hosts: lx00010301d 
+  become: true
+  roles:
+    - role: packages
+      basepackages:
+        - perl-DateTime
+        - perl-Sys-Syslog
+        - perl-LWP-Protocol-https
+        - perl-Digest-SHA.x86_64
+      basepackages_remove:
+        - ipchains
+        - kernel-source
+        - firewalld 
+    - cloudEndureAgent
+    - awsCli
+    - cloudWatchAgent
+    - ssm
+

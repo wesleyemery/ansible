@@ -1,0 +1,22 @@
+---
+# tasks file for ssmMonitorScript
+- name: Download Perl scripts for custom CloudWatch Metrics
+  get_url:
+    url: https://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.2.zip
+    dest: /root/
+    mode: 0440
+
+#- name: Extract CloudWatchMonitoringScripts-1.2.2.zip into /root/
+#  unarchive:
+#    src: /root/CloudWatchMonitoringScripts-1.2.2.zip
+#    dest: /root/
+#
+#- name: Removing /root/CloudWatchMonitoringScripts-1.2.2.zip
+#    file:
+#      path: /root/CloudWatchMonitoringScripts-1.2.2.zip
+#      state: absent
+#
+
+
+
+

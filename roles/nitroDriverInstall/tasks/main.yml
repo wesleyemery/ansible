@@ -1,0 +1,4 @@
+---
+# tasks file for nitroDriverInstall
+- name: Executes scripts that installs Nitro Drivers
+  script: /sdd/ansible/scripts/installNitroDrivers.sh

@@ -1,0 +1,38 @@
+---
+galaxy_info:
+  role_name: amazon-cloudwatch-agent
+  author: Christian González Di Antonio
+  description: Ansible Role for CloudWatch Agent
+  license: license GPLv3
+  company: No Company
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+    - name: Ubuntu
+      version:
+        - trusty
+        - xenial
+        - bionic
+        - cuttlefish
+    - name: Amazon
+      versions:
+        - all
+
+  galaxy_tags:
+    - aws
+    - cloudwatch
+    - agent
+    - redhat
+    - system
+    - utilities
+    - amazon
+    - linux
+    - ubuntu
+    - debian
+    - centos
+
+dependencies: []

@@ -1,0 +1,11 @@
+---
+# tasks file for wr.ssm
+- name: install the ssm from a remote repo
+  yum:
+    name: https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm 
+    state: present
+  
+- name: Enable service amazon-ssm-agent 
+  service:
+    name: amazon-ssm-agent 
+    enabled: yes

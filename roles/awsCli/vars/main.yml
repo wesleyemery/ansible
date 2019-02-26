@@ -1,0 +1,6 @@
+---
+# vars file for wr.awscli
+_python_pip_packages:
+  default:
+    - python-pip
+

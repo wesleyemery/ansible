@@ -16,3 +16,4 @@ if [ -f /etc/redhat-release ]; then
   sudo cp /etc/default/grub /etc/default/grub.{$DATE}
   sudo sed -i '/^GRUB\_CMDLINE\_LINUX/s/\"$/\ net\.ifnames\=0\"/' /etc/default/grub
 fi 
+

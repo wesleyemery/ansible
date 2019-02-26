@@ -9,6 +9,7 @@
         - perl-Sys-Syslog
         - perl-LWP-Protocol-https
         - perl-Digest-SHA.x86_64
+        - unzip
       basepackages_remove:
         - ipchains
         - kernel-source
@@ -18,4 +19,4 @@
     - cloudWatchAgent
     - ssm
     - nitroDriverInstall
-
+    - ssmMonitorScript

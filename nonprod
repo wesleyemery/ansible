@@ -1,0 +1,8 @@
+# file: nonprod
+
+[all:vars]
+ansible_user=ifreling
+ansible_ssh_pass=Fc6pHt22@
+
+[build]
+10.1.168.7 ansible_ssh_user=ifreling ansible_ssh_pass=Fc6pHt22@

@@ -4,7 +4,7 @@ DATE=`date +%m-%d-%y`
 
 if [ -f /etc/redhat-release ]; then
   #Adding Nitro drivers. Dracut is loaded during the installation phase of dracut. 
-  sudo echo 'add_drivers+=" ena nvme xen-netfront xen-blkfront' >> /etc/dracut.conf
+  sudo echo 'add_drivers+=" ena nvme xen-netfront xen-blkfront"' >> /etc/dracut.conf
   
   #Analyze kernel modules and create list dependencies 
   sudo depmod -a 

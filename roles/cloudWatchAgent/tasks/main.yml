@@ -106,6 +106,7 @@
 - name: Start & enable amazon-cloudwatch-agent
   service: 
     name: amazon-cloudwatch-agent 
+    state: start
     enabled: yes
   when: >
     ansible_os_family == 'RedHat' and (

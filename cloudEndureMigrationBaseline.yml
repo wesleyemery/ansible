@@ -1,6 +1,6 @@
 ---
 - name: 
-  hosts: lx00010301d 
+  hosts:  
   become: true
   roles:
     - role: packages
